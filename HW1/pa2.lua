@@ -32,9 +32,10 @@ end
 --filerTable
 --Pre: 
 --		Function f must return a bool and have 1 parameter
---		t must be table whose values are passable to f
+--		t must be table whose values are passable to f.
 --Post: Returns a table consisting of all keys of t for which 
---		f returned true 
+--		f returned true. 
+--		isTrue has same keys as t.
 function pa2.filterTable(f, t)
 	isTrue = {} -- All true return values
 	retValue = {} -- All return values of f
@@ -49,8 +50,8 @@ end
 	
 --FIXME: I'm not returning the first value 
 function pa2.collatzSeq(k) 
-	if(k == 1)then 
-		--coroutine.yield(1)
+	--[[if(k == 1)then --Base Case
+		return
 	else if((k%2) == 0)then 
 		k = k/2
 		coroutine.yield(k)
@@ -61,7 +62,22 @@ function pa2.collatzSeq(k)
 		k = pa2.collatzSeq(k)
 	end
 	end
-end
+	]]
+	
+	while true do
+		if k == 1 then
+			coroutine.yield(k)
+			break
+		end
+		if ((k%2) == 0) then
+			coroutine.yield(k)
+			k = k/2;
+		else 
+			coroutine.yield(k)
+			k = (3*k)+1
+		end
+		end
+	end
 
 return pa2 		--Return the module
 
