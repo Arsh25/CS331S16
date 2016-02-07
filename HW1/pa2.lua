@@ -11,21 +11,24 @@ local pa2 = {}	-- Our module
 
 function pa2.concatLimit(str, num)
 	size = str:len()
-	print ("size"..size)
-	if (size > num)
+	origStr = str
+	totalCopies = math.floor((num - size)/size) 
+	if (totalCopies < 0)
 		then return ""
 	end
 	
-	if (size == num) 
+	if (totalCopies == 0) 
 		then return str
 	else 
-		tempStr = ""
-		while(size < num) do
-			tempStr = str .. tempStr
-			size = tempStr:len()
+		copies = 0
+		while(copies < totalCopies)  do
+			str = str..origStr
+			copies = copies + 1
 		end
-		return tempStr
+		return str
+		
 	end
+	
 end
 
 --filterTable
