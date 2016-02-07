@@ -29,7 +29,7 @@ function pa2.concatLimit(str, num)
 	end
 end
 
---filerTable
+--filterTable
 --Pre: 
 --		Function f must return a bool and have 1 parameter
 --		t must be table whose values are passable to f.
