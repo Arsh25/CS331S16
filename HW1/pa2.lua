@@ -15,9 +15,9 @@ local pa2 = {}	-- Our module
 --			totalCopies = math.floor(num - str:size() / size )
 
 function pa2.concatLimit(str, num)
-	size = str:len()
-	origStr = str
-	totalCopies = math.floor((num - size)/size) 
+	local size = str:len()
+	local origStr = str
+	local totalCopies = math.floor((num - size)/size) 
 	if (totalCopies < 0)
 		then return ""
 	end
@@ -25,7 +25,7 @@ function pa2.concatLimit(str, num)
 	if (totalCopies == 0) 
 		then return str
 	else 
-		copies = 0
+		local copies = 0
 		while(copies < totalCopies)  do
 			str = str..origStr
 			copies = copies + 1
@@ -44,8 +44,8 @@ end
 --		f returned true. 
 --		isTrue has same keys as t.
 function pa2.filterTable(f, t)
-	isTrue = {} -- All true return values
-	retValue = {} -- All return values of f
+	local isTrue = {} -- All true return values
+	local retValue = {} -- All return values of f
 	for key, value in pairs(t) do
 		retValue[key] = f(key)
 		if(retValue[key] == true) then 
