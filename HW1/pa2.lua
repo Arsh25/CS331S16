@@ -1,4 +1,12 @@
-local pa2 = {}
+--[[
+	pa2.lua
+	Arsh Chauhan
+	06/02/2016
+	module pa2.lua for assignment 2
+  ]]
+
+
+local pa2 = {}	-- Our module 
 
 
 function pa2.concatLimit(str, num)
@@ -20,7 +28,13 @@ function pa2.concatLimit(str, num)
 		return tempStr
 	end
 end
-	
+
+--filerTable
+--Pre: 
+--		Function f must return a bool and have 1 parameter
+--		t must be table whose values are passable to f
+--Post: Returns a table consisting of all keys of t for which 
+--		f returned true 
 function pa2.filterTable(f, t)
 	isTrue = {} -- All true return values
 	retValue = {} -- All return values of f
@@ -49,5 +63,5 @@ function pa2.collatzSeq(k)
 	end
 end
 
-return pa2
+return pa2 		--Return the module
 
