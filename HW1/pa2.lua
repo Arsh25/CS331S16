@@ -9,6 +9,11 @@
 local pa2 = {}	-- Our module 
 
 
+--concatLimit
+--Pre: None 
+--Post: Concatenates the passed string, totalCopies times
+--			totalCopies = math.floor(num - str:size() / size )
+
 function pa2.concatLimit(str, num)
 	size = str:len()
 	origStr = str
