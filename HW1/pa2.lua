@@ -50,20 +50,6 @@ end
 	
 --FIXME: I'm not returning the first value 
 function pa2.collatzSeq(k) 
-	--[[if(k == 1)then --Base Case
-		return
-	else if((k%2) == 0)then 
-		k = k/2
-		coroutine.yield(k)
-		k = pa2.collatzSeq(k)
-	else
-		k = ((3*k)+1)
-		coroutine.yield(k)
-		k = pa2.collatzSeq(k)
-	end
-	end
-	]]
-	
 	while true do
 		if k == 1 then
 			coroutine.yield(k)
