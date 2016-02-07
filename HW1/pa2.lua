@@ -22,7 +22,6 @@ function pa2.concatLimit(str, num)
 		tempStr = ""
 		while(size < num) do
 			tempStr = str .. tempStr
-			--print(tempStr)
 			size = tempStr:len()
 		end
 		return tempStr
@@ -48,7 +47,9 @@ function pa2.filterTable(f, t)
 	return isTrue
 end
 	
---FIXME: I'm not returning the first value 
+--collatzSeq
+--Pre: None
+--Post: Returns collatz numbers starting at n
 function pa2.collatzSeq(k) 
 	while true do
 		if k == 1 then
