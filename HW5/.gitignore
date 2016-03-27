@@ -1,0 +1,4 @@
+#Ignore haskeel files 
+
+*.hi
+*.o
