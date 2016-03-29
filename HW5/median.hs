@@ -12,7 +12,7 @@
 import System.IO
 import Data.List
 import Data.Char
-import Data.Int
+
 
 main = do
     putStrLn "Enter a list of numbers"
@@ -48,7 +48,7 @@ numlist = do
             nextNum <- numlist
             return (num:nextNum)
 
---Pre: length of passed list >= 1
+--Pre: None
 --Post: Returns median of list
 --     Returns the mid element for even lists. 
 --     This meets the requirement for the assignment but is is mathematically correct  
