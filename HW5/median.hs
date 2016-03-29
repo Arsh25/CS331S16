@@ -35,7 +35,7 @@ main = do
         else do
             putStrLn "Thank You for using this program."
         
--- Pre: Must enter atleast 1 number
+-- Pre: None
 -- Post: Returns a list of Integers
 numlist = do	
     putStrLn "Enter number (blank line to end):"
