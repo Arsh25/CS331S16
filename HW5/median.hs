@@ -1,3 +1,8 @@
+-- PA5.hs
+-- Arsh Chauhan
+-- Source code for Assn5, Ex B
+-- 03/29/2015
+
 module Main where 
 import System.IO
 import Data.List
