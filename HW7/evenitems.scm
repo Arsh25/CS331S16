@@ -1,4 +1,9 @@
-#lang scheme 
+#lang scheme
+
+; evenitems.scm
+; Arsh Chauhan
+; 04/19/2016
+; Ex B 
 
 ;evenitems: 
 ;Pre: None
